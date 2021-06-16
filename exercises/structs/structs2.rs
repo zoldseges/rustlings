@@ -1,8 +1,6 @@
 // structs2.rs
 // Address all the TODOs to make the tests pass!
 
-// I AM NOT DONE
-
 #[derive(Debug)]
 struct Order {
     name: String,
@@ -35,6 +33,15 @@ mod tests {
         let order_template = create_order_template();
         // TODO: Create your own order using the update syntax and template above!
         // let your_order =
+	let mut your_order = create_order_template();
+	your_order.name = String::from("Hacker in Rust");
+	your_order.year = order_template.year;
+	your_order.made_by_phone = order_template.made_by_phone;
+	your_order.made_by_mobile = order_template.made_by_mobile;
+	your_order.made_by_email = order_template.made_by_email;
+	your_order.item_number = order_template.item_number;
+	your_order.count = 1;
+	
         assert_eq!(your_order.name, "Hacker in Rust");
         assert_eq!(your_order.year, order_template.year);
         assert_eq!(your_order.made_by_phone, order_template.made_by_phone);
